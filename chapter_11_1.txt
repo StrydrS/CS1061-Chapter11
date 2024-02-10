@@ -1,0 +1,12 @@
+The text says: “The else body should contain one or more calls to the same
+method with argument values that are closer to the stopping condition’s value.” But in
+the previous section’s line-of-ships example, the flag signals are not likely to contain
+any values “that are closer to the stopping condition’s value.” In such a case, the
+stopping condition cannot be computed from method parameters. Identify another way
+for a recursive method to determine a stopping condition.
+
+Ans: Another stopping condition that could be used would be to take the number of total 
+recursive calls to the same method. In the line-of-ships example, the number of ships in the 
+fleet is known, and could potentially be retrieved with n = lineOfShips.length() or lineOfShips.size().
+You would call the function recursively (n * 2) - 1 times, and then the number of casualties would be 
+returned to the first ship. 
